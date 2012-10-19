@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,9 +27,6 @@ group :production do
   gem 'pg', '0.12.2'
 end
 
-group :development, :test do
-  gem 'rspec-rails',      ">= 2.0.0.beta"
-end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
