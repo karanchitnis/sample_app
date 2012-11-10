@@ -10,7 +10,7 @@
     <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <%= link_to "sample app", '#', id: "logo" %>
+          <%= link_to "Company Logo", '#', id: "logo" %>
 			<nav>
 			  <ul class="nav pull-right">
 				<li><%= link_to "Home",  root_path %></li>
@@ -22,8 +22,11 @@
       </div>
     </header>
     <div class="container">
-      <%= yield %>
-	  <footer class="footer">
+		<% flash.each do |key, value| %>
+			<div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %>
+		<%= yield %>
+		<footer class="footer">
   <small>
     Rails Project by Karan Chitnis
   </small>
@@ -31,7 +34,7 @@
     <ul>
       <li><%= link_to "About", about_path %></li> 
       <li><%= link_to "Contact", contact_path %></li> 
-      <li><a href="http://news.railstutorial.org/">News</a></li>
+      <li><a href="http://www.google.com">Blog</a></li>
     </ul>
   </nav>
 </footer>
