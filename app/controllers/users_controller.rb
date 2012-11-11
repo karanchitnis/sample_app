@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
 	@user = User.new(params[:user])
     if @user.save
-		flash[:success] = "Welcome to the Company Name!"
+		flash[:success] = "Welcome to the App!"
 		redirect_to @user
     else
 		render 'new'
